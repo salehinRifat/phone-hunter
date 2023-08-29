@@ -78,12 +78,12 @@ let showDetails = async (id) =>{
     <h3 class="text-lg font-bold">Release Date: </h3> <span>${phoneData.releaseDate}</span>
     </div>
     <div class="p-5 bg-gray-300 mt-5">
-        <p>WLAN: ${phoneData.others.WLAN}</p>
-        <p>Bluetooth: ${phoneData.others.Bluetooth}</p>
-        <p>GPS: ${phoneData.others.GPS}</p>
-        <p>NFC: ${phoneData.others.NFC}</p>
-        <p>Radio: ${phoneData.others.Radio}</p>
-        <p>USB: ${phoneData.others.USB}</p>
+        <p>WLAN: ${phoneData?.others?.WLAN}</p>
+        <p>Bluetooth: ${phoneData?.others?.Bluetooth}</p>
+        <p>GPS: ${phoneData?.others?.GPS}</p>
+        <p>NFC: ${phoneData?.others?.NFC}</p>
+        <p>Radio: ${phoneData?.others?.Radio}</p>
+        <p>USB: ${phoneData?.others?.USB}</p>
     </div>
   `
 }
