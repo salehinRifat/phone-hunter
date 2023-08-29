@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class=" px-20 py-10">
+        <h1 class="text-3xl text-center my-10">Search your phone</h1>
+        <div class="text-center mb-10">
+            <input type="text" placeholder="Search your phone" class="input input-bordered w-full max-w-xs"
+                id="search-input" /><button class="btn btn-primary" id="search-btn" onclick="searched()">Search</button>
+        </div>
+        <div class="flex justify-center mb-10">
+            <span class="loading loading-dots loading-md hidden" id="loading-animation"></span>
+        </div>
+        <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+        </div>
+        <button class="btn btn-primary hidden my-5" id="loadMore" onclick="loadMore()">Load More...</button>
+
+        <!-- Modal  -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_phone_details" class="modal">
+            <form method="dialog" class="modal-box">
+                <div id="details-container" class="">
+                    
+                </div>
+                <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
